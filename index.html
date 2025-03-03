@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitrual Man Samples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            font-size: 40px; /* 更大字体 */
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .sub-header {
+            text-align: justify; /* 两端对齐 */
+            font-size: 20px;
+            margin-bottom: 30px;
+            color: #555;
+        }
+        .reference-section {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        .reference-section ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        .reference-section ul li {
+            margin-bottom: 5px;
+        }
+        .reference-section a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .reference-section a:hover {
+            text-decoration: underline;
+        }
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 40px;
+            color: #333;
+        }
+        .section-description {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #777;
+        }
+        table {
+            width: 100%;
+            max-width: 1200px; /* 固定表格宽度 */
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ccc;
+            word-wrap: break-word; /* 换行显示长内容 */
+            max-width: 150px; /* 固定列宽 */
+        }
+        th {
+            background-color: #f1f1f1;
+            font-weight: bold;
+        }
+        td {
+            background-color: #fff;
+        }
+        audio {
+            width: 100%;
+        }
+        audio::-webkit-media-controls-current-time-display,
+        audio::-webkit-media-controls-time-remaining-display {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- 方法名字和摘要 -->
+        <div class="header">
+            数字虚拟人所需语音克隆问题求解例子
+        </div>
+        <div class="sub-header">
+            数字虚拟人是一种融合了人工智能、计算机图形学和自然语言处理技术的创新应用，旨在通过计算机模拟人类的外貌、语音、动作等特征，从而实现高度自然的人机交互。近年来，随着深度学习、语音合成、计算机视觉等技术的快速发展，数字虚拟人已成为研究热点，并在多个领域展现出广泛的应用价值。
+            在所有这些应用中，语音作为人类交流的核心方式，对于数字虚拟人的自然度和用户体验起着至关重要的作用。语音克隆，别称有声音复刻、声音克隆、个性化语音定制、个性化语音合成等等。其主要的含义是指将文本转换成某一个特定的人的语音，像是那个人说出那句话一样。高质量的语音克隆技术能够赋予数字虚拟人更真实、生动的表达能力，使其能够模仿特定个体的语音特征，从而在多种场景下提供高度个性化的交互体验。然而，目前主流的语音克隆方法通常依赖于大量的训练数据，即需要长达 5-20 分钟的参考语音才能生成高质量的合成语音。这一限制极大地影响了语音克隆技术的实用性，使得用户难以快速定制专属的数字虚拟人语音。因此，基于极少语音样本的高质量语音克隆技术成为当前研究的重要问题之一。本文将第三章提出的面向单样本语音转换的约束优化数据增广方法应用于数字虚拟人的语音克隆任务。该方法通过基于约束优化的数据增广技术有效提升参考语音数据集，从而在数据极度受限的情况下，依然能够生成高质量、个性化的语音克隆结果。相比于传统语音克隆方法，该方法能够在极少的训练数据条件下显著提高语音克隆的自然度、语音质量和说话人相似度，从而为数字虚拟人的语音合成提供更加高效的解决方案。
+        </div>
+        <!-- 小标题和简短介绍 -->
+        <div class="section-title">当前开源或商用语音克隆技术对比例子</div>
+        <div class="section-description">本节展示了在自制数据集上与当前开源或商用的语音克隆技的几个例子。</div>
+        <!-- 参考方法链接 -->
+        <div class="reference-section">
+            <strong>对比的方法</strong>
+            <ul>
+                <li><a href="https://modelscope.cn/models/iic/speech_personal_sambert-hifigan_nsf_tts_zh-cn_pretrain_16k/summary/" target="_blank">Modelscope社区SAMBERT个性化语音合成</a></li>
+                <li><a href="https://www.xfyun.cn/services/quick_tts" target="_blank">讯飞一句话复刻</a></li>
+                <li><a href="https://github.com/fishaudio/fish-speech" target="_blank">Fish Speech</a></li>
+                <li><a href="https://hailuoai.com/audio/voices" target="_blank">海螺AI语音克隆（海外版）</a></li>
+                <li><a href="https://noiz.ai/landing" target="_blank">Noiz语音克隆</a></li>
+                <li><a href="https://github.com/Plachtaa/seed-vc" target="_blank">Seed VC</a></li>
+            </ul>
+        </div>
+        <!-- 表格部分 -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Rerence</th>
+                    <th>Modelscope</th>
+                    <th>讯飞</th>
+                    <th>Fish Speech</th>
+                    <th>海螺AI</th>
+                    <th>Noiz语音克隆</th>
+                    <th>Seed VC</th>
+                    <th>Ours</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><audio controls><source src="ref/lz1.wav" type="audio/wav"></audio></td>
+                    <td><audio controls><source src="modelscope/lz.wav" type="audio/wav"></audio></td>
+                    <td><audio controls><source src="xunfei/lz.wav" type="audio/wav"></audio></td>
+                    <td><audio controls><source src="FishSpeech/lz.mp3" type="audio/mp3"></audio></td>
+                    <td><audio controls><source src="hailuo/lz.mp3" type="audio/mp3"></audio></td>
+                    <td><audio controls><source src="noiz/lz.wav" type="audio/wav"></audio></td>
+                    <td><audio controls><source src="SeedVc/lz.wav" type="audio/wav"></audio></td>
+                    <td><audio controls><source src="ours/lz.wav" type="audio/wav"></audio></td>
+                </tr>
+                <tr>
+                    <td><audio controls><source src="ref/hls_30s.wav" type="audio/wav"></audio></td>
+                    <td><audio controls><source src="modelscope/hls.wav" type="audio/wav"></audio></td>
+                    <td><audio controls><source src="xunfei/hls.wav" type="audio/wav"></audio></td>
+                    <td><audio controls><source src="FishSpeech/hls.mp3" type="audio/mp3"></audio></td>
+                    <td><audio controls><source src="hailuo/hls.mp3" type="audio/mp3"></audio></td>
+                    <td><audio controls><source src="noiz/hls.wav" type="audio/wav"></audio></td>
+                    <td><audio controls><source src="SeedVc/hls.wav" type="audio/wav"></audio></td>
+                    <td><audio controls><source src="ours/hls.wav" type="audio/wav"></audio></td>
+                </tr>
+                <tr>
+                    <td><audio controls><source src="ref/zzf_1.wav" type="audio/wav"></audio></td>
+                    <td><audio controls><source src="modelscope/zzf.wav" type="audio/wav"></audio></td>
+                    <td><audio controls><source src="xunfei/zzf.wav" type="audio/wav"></audio></td>
+                    <td><audio controls><source src="FishSpeech/zzf.mp3" type="audio/mp3"></audio></td>
+                    <td><audio controls><source src="hailuo/zzf.mp3" type="audio/mp3"></audio></td>
+                    <td><audio controls><source src="noiz/zzf.wav" type="audio/wav"></audio></td>
+                    <td><audio controls><source src="SeedVc/zzf.wav" type="audio/wav"></audio></td>
+                    <td><audio controls><source src="ours/zzf.wav" type="audio/wav"></audio></td>
+                </tr>
+                <tr>
+                    <td><audio controls><source src="ref/lmy1.wav" type="audio/wav"></audio></td>
+                    <td><audio controls><source src="modelscope/lmy.wav" type="audio/wav"></audio></td>
+                    <td><audio controls><source src="xunfei/lmy.wav" type="audio/wav"></audio></td>
+                    <td><audio controls><source src="FishSpeech/lmy.mp3" type="audio/mp3"></audio></td>
+                    <td><audio controls><source src="hailuo/lmy.mp3" type="audio/mp3"></audio></td>
+                    <td><audio controls><source src="noiz/lmy.wav" type="audio/wav"></audio></td>
+                    <td><audio controls><source src="SeedVc/lmy.wav" type="audio/wav"></audio></td>
+                    <td><audio controls><source src="ours/lmy.wav" type="audio/wav"></audio></td>
+                </tr>
+                <tr>
+                    <td><audio controls><source src="ref/zh1.wav" type="audio/wav"></audio></td>
+                    <td><audio controls><source src="modelscope/zh.wav" type="audio/wav"></audio></td>
+                    <td><audio controls><source src="xunfei/zh.wav" type="audio/wav"></audio></td>
+                    <td><audio controls><source src="FishSpeech/zh.mp3" type="audio/mp3"></audio></td>
+                    <td><audio controls><source src="hailuo/zh.mp3" type="audio/mp3"></audio></td>
+                    <td><audio controls><source src="noiz/zh.wav" type="audio/wav"></audio></td>
+                    <td><audio controls><source src="SeedVc/zh.wav" type="audio/wav"></audio></td>
+                    <td><audio controls><source src="ours/zh.wav" type="audio/wav"></audio></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
